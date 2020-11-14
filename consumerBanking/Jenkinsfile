@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                cd consumerBanking
-                sh 'mvn clean install'
+                sh 'mvn --version'
             }
         }
     }
