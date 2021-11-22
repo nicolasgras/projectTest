@@ -32,11 +32,12 @@ jobs:
     - name: Debug
       run: |
         pwd
+        cd consumerBanking/target
         ls -la
 
     - uses: papeloto/action-zip@v1
       with:
-        files: /consumerBanking/target/*.jar
+        files: consumerBanking/target/*.jar
         recursive: true
         dest: veracode-pipeline-scan-results-to-sarif.zip
 
