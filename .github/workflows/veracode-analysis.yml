@@ -29,6 +29,11 @@ jobs:
         cd consumerBanking
         mvn clean install
 
+    - name: Debug
+      run: |
+        pwd
+        ls -la
+
     - uses: papeloto/action-zip@v1
       with:
         files: /consumerBanking/target/*.jar
