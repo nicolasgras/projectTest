@@ -37,7 +37,7 @@ jobs:
 
     - uses: papeloto/action-zip@v1
       with:
-        files: consumerBanking/target/*.jar
+        files: consumerBanking/target/consumerBanking-1.0-SNAPSHOT.jar
         recursive: true
         dest: veracode-pipeline-scan-results-to-sarif.zip
 
