@@ -9,10 +9,7 @@ name: Labeler
 on: [pull_request]
 
 jobs:
-  label:
-
-    question:
-    - "**"
+  pr-label:
 
     runs-on: ubuntu-latest
 
