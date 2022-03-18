@@ -1,6 +1,6 @@
 name: hello-world
 on: 
-  pull_request:
+  push:
     branches:    
       - master
   
@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        run: echo "Hello World! Else"
