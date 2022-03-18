@@ -1,6 +1,6 @@
 name: hello-world
 on: 
-  push:
+  pull_request:
     branches:    
       - master
   
@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World! Else"
+        run: | 
+          echo "Hello World! Else"
+          echo "${{ github.event }}"
