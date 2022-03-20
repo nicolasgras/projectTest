@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        if: contains(github.event.pull_request.labels.*.name, 'my-label')
+        if: contains( github.event.pull_request.labels.*.name, 'my-label')
         run: | 
           echo "Hello World! ++++++++++"
