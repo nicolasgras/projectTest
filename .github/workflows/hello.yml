@@ -1,15 +1,20 @@
 name: hello-world
-on: 
-  push:
-    branches:    
-      - master
-    paths:
-      - '.github/workflows/**'
+on:
+  pull_request:
+    branches: [main, master]
+    types: [labeled, closed]
+
+#jobs:
+#  build-push-site:
+#    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'site')
+#    uses: avifatal/nx-tokenct/.github/workflows/build-push.yml@main
+#    with:
   
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
+        if: contains(github.event.pull_request.labels.*.name, 'my-label')
         run: | 
           echo "Hello World! ++++++++++"
