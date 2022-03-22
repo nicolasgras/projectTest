@@ -18,4 +18,4 @@ jobs:
         if: contains( github.event.pull_request.labels.*.name, 'my-label')
         run: | 
           echo "Hello World! ++++++++++"
-          echo '${{ toJSON(github.event.commits) }}' | jq "."
+          echo '${{ toJSON(github.event) }}' | jq "."
