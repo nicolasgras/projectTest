@@ -11,9 +11,6 @@ on: [pull_request]
 jobs:
   label:
 
-    question:
-    - "**"
-
     runs-on: ubuntu-latest
 
     steps:
