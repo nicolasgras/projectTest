@@ -1,0 +1,21 @@
+name: Manual Inputs
+run-name: Workflow run by @${{ github.actor }} with log level ${{ inputs.logLevel }}
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+jobs:
+  hello:
+    name: Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sample step
+        run: echo "Hello world, my log level is ${{ inputs.logLevel }}
