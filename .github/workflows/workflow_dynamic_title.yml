@@ -18,4 +18,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sample step
-        run: echo "Hello world, my log level is ${{ inputs.logLevel }}
+        run: echo "Hello world, my log level is ${{ inputs.logLevel }}"
